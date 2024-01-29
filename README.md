@@ -1,59 +1,27 @@
 # Customer Loan Rating Classification (고객 대출 등급 분류)
 
+## Project Overview
+
+**Objective**: To develop a predictive model for classifying customer loan ratings based on an analysis of loan customer data.  
+**Dataset Overview**: The dataset includes various features such as loan amount, loan duration, employment duration, home ownership status, annual income, and more.
+
+## Exploratory Data Analysis (EDA)
+
+- Analysis of categorical and numerical variables.
+- Exploration of the relationship between loan ratings and other variables.
+
+## Data Preprocessing
+
+- Handling Missing Values: Examination and treatment of missing values in the dataset.
+- Categorical Variable Encoding: Application of One-Hot Encoding and Label Encoding to transform categorical variables.
+- Numerical Variable Scaling: Utilization of Standard Scaling to scale numerical variables.
+
+## (WIP) Modeling
+
 ## Execution Environment
 
 The project requires the following software versions for execution:
 
-```
 - Python 3.11.5
 - Jupyter Notebook 6.5.4
 - Anaconda 23.7.4
-```
-
-## Analysis plan
-- 목표: 대출 고객의 대출등급 예측
-- 평가 지표: `Macro F1 Score`
-
-### 1. EDA
-
-데이터의 분포, 변수 간 관계, 이상치, 패턴 및 추세 파악으로 데이터의 기본적인 특성을 이해하고, 모델 개발에 앞서 유의미한 인사이트 도출
-
-#### 개별 변수 분석
-각 변수의 분포 및 기본 통계를 파악합니다.
-
-- 수치형 변수에 대한 히스토그램과 박스플롯을 통해 분포를 살펴봅니다.
-- 범주형 변수에 대해서는 막대 그래프를 사용하여 각 범주의 빈도를 분석합니다.
-
-#### 목표 변수('대출등급')와의 관계 분석
-각 독립 변수가 목표 변수와 어떤 관계를 가지고 있는지 분석합니다.
-
-- 수치형 변수에 대해서는 '대출등급' 별로 박스플롯을 그려 변수의 분포를 비교합니다.
-- 범주형 변수에 대해서는 각 범주 내에서 '대출등급'의 분포를 막대 그래프로 비교합니다.
-
-#### 변수 간 상관 관계 분석
-변수 간 상관관계를 분석하여 어떤 변수들이 서로 관련이 있는지 파악합니다.
-
-- 상관 행렬을 사용하여 수치형 변수 간의 상관관계를 시각화합니다.
-
-#### 이상치 탐지
-데이터에서 이상치를 탐지하여 데이터의 정확도와 신뢰도를 높일 수 있습니다.
-
-### 2. 데이터 전처리
-
-- 범주형 변수(예: '주택소유상태', '대출목적')는 원-핫 인코딩이나 레이블 인코딩을 통해 수치형으로 변환해야 합니다.
-- 수치형 변수들은 정규화 또는 표준화를 고려할 수 있습니다.
-
-### 3. 모델링
-
-- 예측 목적에 적합한 모델을 선택합니다. 이 경우, 분류 문제이므로 로지스틱 회귀, 결정 트리, 랜덤 포레스트, 그라디언트 부스팅 또는 심층 신경망과 같은 분류 알고리즘을 고려할 수 있습니다.
-- 사전 학습된 모델을 사용할 수 있으나, 이는 주로 이미지나 텍스트 데이터에 대한 모델에서 일반적입니다. 이 데이터셋은 주로 구조화된 형태이므로, 전통적인 머신러닝 모델이 더 적합할 수 있습니다.
-
-### 4. 모델 훈련 및 평가
-
-- 데이터를 훈련 및 검증 세트로 분할합니다.
-- 모델을 훈련 데이터에 피팅하고 검증 데이터를 사용하여 성능을 평가합니다.
-- 평가 지표인 Macro F1 Score에 집중합니다.
-
-### 5. 하이퍼파라미터 튜닝
-
-- 모델의 성능을 최적화하기 위해 그리드 서치, 랜덤 서치, 베이지안 최적화 등을 사용합니다.
